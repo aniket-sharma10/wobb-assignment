@@ -1,38 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-import NikeLogo from "../assets/nike.png"
-import AdidasLogo from "../assets/adidas.png"
-import SamsungLogo from "../assets/samsung.png"
-import HmLogo from "../assets/hm.png"
-import AppleLogo from "../assets/apple.png"
-import SephoraLogo from "../assets/sephora.png"
-import ZaraLogo from "../assets/zara.png"
-import MaybellineLogo from "../assets/maybelline.png"
-import LorealLogo from "../assets/loreal.png"
-import NvidiaLogo from "../assets/nvidia.png"
-import PumaLogo from "../assets/puma.webp"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import {brands, testimonials} from "../data"
 
 const BrandScroller = () => {
-  const brands = [
-    { name: "Nike", logo: NikeLogo},
-    { name: "Adidas", logo: AdidasLogo },
-    { name: "Puma", logo:  PumaLogo},
-    { name: "Sephora", logo: SephoraLogo },
-    { name: "H&M", logo: HmLogo },
-    { name: "Zara", logo: ZaraLogo },
-    { name: "Samsung", logo: SamsungLogo },
-    { name: "Apple", logo: AppleLogo },
-    { name: "Nvidia", logo: NvidiaLogo },
-    { name: "Loreal", logo: LorealLogo },
-    { name: "Maybelline", logo: MaybellineLogo }
-  ];
-
-  const settings2 = {
+  // settings for slider
+  const settings = {
     dots: false,
     arrows: false,
     infinite: true,
@@ -80,7 +56,7 @@ const BrandScroller = () => {
         </p>
         
         <div className="relative overflow-hidden">
-          <Slider {...settings2} className="">
+          <Slider {...settings} className="">
             {brands &&
               brands.length > 0 &&
               brands.map((brand, index) => (
@@ -147,44 +123,6 @@ const TestimonialCard = ({ testimonial }) => (
 );
 
 const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Fashion & Lifestyle Creator",
-      rating: 5,
-      comment: "Wobb has transformed how I collaborate with brands. The platform is intuitive, and the team is incredibly supportive. I've doubled my earnings in just 6 months!",
-      brandCount: 12,
-      brandLogos: [
-        HmLogo,
-        ZaraLogo,
-        NikeLogo
-      ]
-    },
-    {
-      name: "Mike Chen",
-      role: "Tech Reviewer",
-      rating: 5,
-      comment: "The quality of campaigns and brands on Wobb is outstanding. The platform makes it easy to find relevant opportunities and manage collaborations efficiently.",
-      brandCount: 8,
-      brandLogos: [
-        AppleLogo,
-        SamsungLogo,
-        NvidiaLogo
-      ]
-    },
-    {
-      name: "Priya Patel",
-      role: "Beauty & Wellness Influencer",
-      rating: 5,
-      comment: "What sets Wobb apart is their commitment to creator success. The analytics tools and campaign insights have helped me grow my personal brand significantly.",
-      brandCount: 15,
-      brandLogos: [
-        SephoraLogo,
-        MaybellineLogo,
-        LorealLogo
-      ]
-    }
-  ];
 
   return (
     <div className="bg-gray-50 py-16">
