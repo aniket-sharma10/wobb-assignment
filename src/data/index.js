@@ -40,7 +40,7 @@ export const campaigns = [
     brandLogo: NikeLogo,
     campaignImage: NikeCampaign,
     title: "Athletic Wear Promotion",
-    description: "Share your authentic workout moments wearing Nike gear",
+    description: "Share your workout moments wearing Nike gear",
     payoutType: "barter",
     payoutValue: "Worth ₹15,000",
     hired: 12,
