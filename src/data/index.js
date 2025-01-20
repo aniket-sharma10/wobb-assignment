@@ -105,7 +105,7 @@ export const campaigns = [
     brandLogo: LorealLogo,
     campaignImage: LorealCampaign,
     title: "Skin Care Routine Promotion",
-    description: "Showcase your skin care routine featuring L'Oréal's new product range",
+    description: "Show your skincare routine featuring L'Oréal's new product range",
     payoutType: "fixed",
     payoutValue: "₹18,000",
     hired: 10,
